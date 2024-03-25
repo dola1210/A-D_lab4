@@ -1,10 +1,18 @@
+import React, { useEffect, useState } from 'react';
 import './App.css';
 function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const storedCount = parseInt(localStorage.getItem('visitCount')) || 0;
+    const newCount = storedCount + 1;
+    localStorage.setItem('visitCount', newCount);
+    setCount(newCount);
+  }, []);
+    
   return (
-    <div>
-      <h1>
-        This is the normal HTML syntax you know
-      </h1>
+    <div className="App">
+      <p>這個網頁被訪問了 {count} 次。</p>
     </div>
   );
 }
