@@ -12,7 +12,7 @@ function App() {
     
   return (
     <div className="App">
-      <p>這個網頁被訪問了 {count} 次。</p>
+      <p align="center">這個網頁被訪問了 {count} 次。</p>
     </div>
   );
 }
