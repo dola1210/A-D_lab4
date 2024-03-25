@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+.App {
+  position: sticky;
+  top: 100%;
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 10px 0;
+  height: 20px;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;

@@ -4,15 +4,15 @@ function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const storedCount = parseInt(localStorage.getItem('visitCount')) || 0;
-    const newCount = storedCount + 1;
-    localStorage.setItem('visitCount', newCount);
-    setCount(newCount);
+    const cnt = parseInt(localStorage.getItem('visitCount')) || 0;
+    const newcnt = cnt + 1;
+    localStorage.setItem('visitCount', newcnt);
+    setCount(newcnt);
   }, []);
     
   return (
     <div className="App">
-      <p align="center">這個網頁被訪問了 {count} 次。</p>
+      <p align="center">訪問人數： {count} </p>
     </div>
   );
 }
